@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurar Preços</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Configurar Valores</h1>
+        
+        <div class="card">
+            <div class="card-body">
+                <form id="formPrecos" onsubmit="salvarPreco(event)">
+                    <div class="mb-3">
+                        <label>Valor por hora (R$)</label>
+                        <input type="number" step="0.01" id="valorHora" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <a href="../../index.html" class="btn btn-secondary">Voltar</a>
+                </form>
+
+                <h4 class="mt-4">Histórico de Valores</h4>
+                <div id="historicoPrecos"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/sripts_config.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+.container {
+    max-width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Botões principais */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-action {
+    width: 100%;
+    height: 80px;
+    font-size: 1.4rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-entrada {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-saida {
+    background-color: #ffc107;
+    color: black;
+}
+
+/* Seção de input */
+#inputSection {
+    display: none;
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.placa-input {
+    width: 100%;
+    height: 60px;
+    font-size: 1.3rem;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.btn-confirmar {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    height: 50px;
+    font-size: 1.2rem;
+}
+
+.btn-cancelar {
+    background-color: #6c757d;
+    color: white;
+    width: 100%;
+    height: 50px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Ticket */
+#ticket {
+    display: none;
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.ticket-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.ticket-content p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.btn-imprimir {
+    background-color: #17a2b8;
+    color: white;
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+    }
+    
+    .btn-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .btn-action {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-action {
+        font-size: 1.2rem;
+        height: 70px;
+    }
+    
+    .placa-input {
+        font-size: 1.1rem;
+        height: 50px;
+    }
+}
+
+/* Lista de veículos estacionados */
+#estacionadosSection {
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#listaEstacionados {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.toggle-list-btn {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.veiculo-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.veiculo-info {
+    font-size: 0.9rem;
+}
+
+.placa-badge {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .veiculo-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
